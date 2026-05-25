@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Retroalimentación</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fc;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #023e8a;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #90e0ef;
+        }
+
+        /* CONTENEDOR */
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 50px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h1 {
+            color: #0077b6;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            text-align: center;
+            color: gray;
+            margin-bottom: 30px;
+        }
+
+        /* FORMULARIO */
+
+        label {
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        select,
+        textarea,
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        select:focus,
+        textarea:focus,
+        input:focus {
+            border-color: #0077b6;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        /* ESTRELLAS */
+
+        .rating {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #ccc;
+        }
+
+        .rating span:hover,
+        .rating span:hover ~ span {
+            color: gold;
+        }
+
+        /* BOTÓN */
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            margin-top: 30px;
+            border: none;
+            background: #0077b6;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #023e8a;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #023e8a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <a href="inicio.html">Inicio</a>
+
+        <a href="tutorias.html">Tutorías</a>
+
+        <a href="agendamiento.html">Agendamiento</a>
+
+        <a href="seguimiento.html">Seguimiento</a>
+
+        <a href="retroalimentacion.html">Retroalimentación</a>
+
+        <a href="docente.html">Panel Docente</a>
+
+    </nav>
+
+    <!-- CONTENIDO -->
+
+    <div class="container">
+
+        <div class="card">
+
+            <h1>Retroalimentación</h1>
+
+            <p>
+                Comparte tu experiencia sobre la tutoría recibida.
+            </p>
+
+            <form>
+
+                <label>Seleccione la tutoría</label>
+
+                <select>
+
+                    <option>Programación - Ing. Carlos López</option>
+
+                    <option>Matemáticas - Ing. María Pérez</option>
+
+                    <option>Base de Datos - Ing. Juan Torres</option>
+
+                </select>
+
+                <label>Calificación</label>
+
+                <div class="rating">
+
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+                    <span>★</span>
+
+                </div>
+
+                <label>Comentario</label>
+
+                <textarea placeholder="Escribe tu opinión sobre la tutoría..."></textarea>
+
+                <label>Sugerencias</label>
+
+                <input type="text" placeholder="Ejemplo: Más ejercicios prácticos">
+
+                <button class="btn">
+
+                    Enviar Retroalimentación
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2025 Plataforma de Tutorías Académicas
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

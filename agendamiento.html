@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agendamiento de Tutorías</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fc;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #003366;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd60a;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: linear-gradient(to right, #0077b6, #48cae4);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+        /* CONTENEDOR */
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            margin: 50px auto;
+        }
+
+        /* TARJETA */
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            color: #0077b6;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* FORMULARIO */
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+            font-size: 15px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #0077b6;
+        }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        /* BOTÓN */
+
+        .btn {
+            margin-top: 30px;
+            padding: 14px;
+            border: none;
+            background: #0077b6;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #023e8a;
+        }
+
+        /* INFO EXTRA */
+
+        .info {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+            gap: 20px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .info-card h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <a href="inicio.html">Inicio</a>
+
+        <a href="tutorias.html">Tutorías</a>
+
+        <a href="agendamiento.html">Agendamiento</a>
+
+        <a href="seguimiento.html">Seguimiento</a>
+
+        <a href="retroalimentacion.html">Retroalimentación</a>
+
+        <a href="docente.html">Panel Docente</a>
+
+    </nav>
+
+    <!-- HEADER -->
+
+    <section class="header">
+
+        <h1>Agendamiento de Tutorías</h1>
+
+        <p>
+            Programa tus sesiones académicas de manera rápida y sencilla.
+        </p>
+
+    </section>
+
+    <!-- CONTENIDO -->
+
+    <div class="container">
+
+        <!-- FORMULARIO -->
+
+        <div class="card">
+
+            <h2>Formulario de Agendamiento</h2>
+
+            <form>
+
+                <label>Seleccione la Materia</label>
+
+                <select>
+
+                    <option>Programación</option>
+                    <option>Matemáticas</option>
+                    <option>Base de Datos</option>
+                    <option>Redes</option>
+
+                </select>
+
+                <label>Seleccione el Docente</label>
+
+                <select>
+
+                    <option>Ing. Carlos López</option>
+                    <option>Ing. María Pérez</option>
+                    <option>Ing. Juan Torres</option>
+
+                </select>
+
+                <label>Fecha de la Tutoría</label>
+
+                <input type="date">
+
+                <label>Hora</label>
+
+                <input type="time">
+
+                <label>Modalidad</label>
+
+                <select>
+
+                    <option>Virtual</option>
+                    <option>Presencial</option>
+
+                </select>
+
+                <label>Descripción o Tema</label>
+
+                <textarea placeholder="Describe el tema o dificultad académica..."></textarea>
+
+                <a href="seguimiento.html">
+
+                    <button type="button" class="btn">
+
+                        Agendar Tutoría
+
+                    </button>
+
+                </a>
+
+            </form>
+
+        </div>
+
+        <!-- INFORMACIÓN -->
+
+        <div class="info">
+
+            <div class="info-card">
+
+                <h3>📅 Horarios</h3>
+
+                <p>
+                    Consulta la disponibilidad
+                    de los docentes antes
+                    de agendar.
+                </p>
+
+            </div>
+
+            <div class="info-card">
+
+                <h3>💻 Modalidad</h3>
+
+                <p>
+                    Las tutorías pueden
+                    realizarse virtuales
+                    o presenciales.
+                </p>
+
+            </div>
+
+            <div class="info-card">
+
+                <h3>📚 Aprendizaje</h3>
+
+                <p>
+                    Refuerza tus conocimientos
+                    académicos con apoyo
+                    personalizado.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2025 Universidad de Guayaquil
+            - Plataforma de Tutorías Académicas
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

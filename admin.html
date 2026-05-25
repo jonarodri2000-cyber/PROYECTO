@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel Administrador - Universidad de Guayaquil</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            background: #f4f7fc;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar {
+            width: 260px;
+            height: 100vh;
+            background: #003366;
+            color: white;
+            position: fixed;
+            padding-top: 30px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            color: #ffd60a;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 18px 30px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        .sidebar a:hover {
+            background: #0077b6;
+            padding-left: 40px;
+        }
+
+        /* CONTENIDO */
+
+        .main {
+            margin-left: 260px;
+            width: calc(100% - 260px);
+            padding: 30px;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: linear-gradient(to right, #0077b6, #48cae4);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+        /* TARJETAS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #0077b6;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 35px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* TABLA */
+
+        .table-container {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .table-container h2 {
+            color: #0077b6;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #0077b6;
+            color: white;
+            padding: 15px;
+        }
+
+        td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        /* BOTONES */
+
+        .btn {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .editar {
+            background: #0077b6;
+        }
+
+        .editar:hover {
+            background: #023e8a;
+        }
+
+        .eliminar {
+            background: red;
+        }
+
+        .eliminar:hover {
+            background: darkred;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: gray;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h2>UG Admin</h2>
+
+        <a href="inicio.html">🏠 Inicio</a>
+
+        <a href="admin.html">📊 Dashboard</a>
+
+        <a href="tutorias.html">📚 Tutorías</a>
+
+        <a href="seguimiento.html">📈 Seguimiento</a>
+
+        <a href="docente.html">👨‍🏫 Docentes</a>
+
+        <a href="registro.html">👨‍🎓 Usuarios</a>
+
+        <a href="login.html">🚪 Cerrar Sesión</a>
+
+    </div>
+
+    <!-- CONTENIDO -->
+
+    <div class="main">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h1>Panel de Administración</h1>
+
+            <p>
+                Universidad de Guayaquil -
+                Plataforma de Tutorías Académicas
+            </p>
+
+        </div>
+
+        <!-- TARJETAS -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h2>Total Estudiantes</h2>
+
+                <p>150</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Total Docentes</h2>
+
+                <p>25</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Tutorías Activas</h2>
+
+                <p>48</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Materias</h2>
+
+                <p>12</p>
+
+            </div>
+
+        </div>
+
+        <!-- TABLA -->
+
+        <div class="table-container">
+
+            <h2>Gestión de Usuarios</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Juan Pérez</td>
+                    <td>juan@ug.edu.ec</td>
+                    <td>Estudiante</td>
+                    <td>Activo</td>
+
+                    <td>
+
+                        <button class="btn editar">
+
+                            Editar
+
+                        </button>
+
+                        <button class="btn eliminar">
+
+                            Eliminar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>María Gómez</td>
+                    <td>maria@ug.edu.ec</td>
+                    <td>Docente</td>
+                    <td>Activo</td>
+
+                    <td>
+
+                        <button class="btn editar">
+
+                            Editar
+
+                        </button>
+
+                        <button class="btn eliminar">
+
+                            Eliminar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Carlos Mendoza</td>
+                    <td>carlos@ug.edu.ec</td>
+                    <td>Administrador</td>
+                    <td>Activo</td>
+
+                    <td>
+
+                        <button class="btn editar">
+
+                            Editar
+
+                        </button>
+
+                        <button class="btn eliminar">
+
+                            Eliminar
+
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                © 2025 Universidad de Guayaquil -
+                Sistema de Tutorías Académicas
+            </p>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

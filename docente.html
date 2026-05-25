@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Panel Docente - Universidad de Guayaquil</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fc;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            background: #003366;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd60a;
+        }
+
+        /* HEADER */
+
+        .header {
+            background: linear-gradient(to right, #0077b6, #48cae4);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+        }
+
+        /* CONTENEDOR */
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        /* TARJETAS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #0077b6;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #555;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        /* ESTADOS */
+
+        .estado {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            color: white;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .pendiente {
+            background: orange;
+        }
+
+        .completada {
+            background: green;
+        }
+
+        /* BOTONES */
+
+        .btn {
+            padding: 12px 18px;
+            border: none;
+            background: #0077b6;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #023e8a;
+        }
+
+        /* TABLA */
+
+        .tabla-container {
+            margin-top: 50px;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #0077b6;
+            color: white;
+            padding: 18px;
+        }
+
+        td {
+            padding: 18px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <a href="inicio.html">Inicio</a>
+
+        <a href="tutorias.html">Tutorías</a>
+
+        <a href="agendamiento.html">Agendamiento</a>
+
+        <a href="seguimiento.html">Seguimiento</a>
+
+        <a href="retroalimentacion.html">Retroalimentación</a>
+
+        <a href="docente.html">Panel Docente</a>
+
+    </nav>
+
+    <!-- HEADER -->
+
+    <section class="header">
+
+        <h1>Panel del Docente</h1>
+
+        <p>
+            Gestión y seguimiento de tutorías académicas
+            - Universidad de Guayaquil
+        </p>
+
+    </section>
+
+    <!-- CONTENIDO -->
+
+    <div class="container">
+
+        <!-- TARJETAS -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h2>📚 Tutoría Pendiente</h2>
+
+                <p>
+                    <strong>Estudiante:</strong>
+                    Juan Pérez
+                </p>
+
+                <p>
+                    <strong>Materia:</strong>
+                    Programación
+                </p>
+
+                <p>
+                    <strong>Fecha:</strong>
+                    20/09/2025
+                </p>
+
+                <span class="estado pendiente">
+
+                    Pendiente
+
+                </span>
+
+                <button class="btn">
+
+                    Aceptar Tutoría
+
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h2>✅ Tutoría Completada</h2>
+
+                <p>
+                    <strong>Estudiante:</strong>
+                    María Gómez
+                </p>
+
+                <p>
+                    <strong>Materia:</strong>
+                    Base de Datos
+                </p>
+
+                <p>
+                    <strong>Fecha:</strong>
+                    18/09/2025
+                </p>
+
+                <span class="estado completada">
+
+                    Completada
+
+                </span>
+
+                <button class="btn">
+
+                    Ver Detalles
+
+                </button>
+
+            </div>
+
+            <div class="card">
+
+                <h2>📅 Nueva Solicitud</h2>
+
+                <p>
+                    <strong>Estudiante:</strong>
+                    Carlos Mendoza
+                </p>
+
+                <p>
+                    <strong>Materia:</strong>
+                    Matemáticas
+                </p>
+
+                <p>
+                    <strong>Modalidad:</strong>
+                    Virtual
+                </p>
+
+                <span class="estado pendiente">
+
+                    En Espera
+
+                </span>
+
+                <button class="btn">
+
+                    Revisar Solicitud
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TABLA -->
+
+        <div class="tabla-container">
+
+            <table>
+
+                <tr>
+
+                    <th>Estudiante</th>
+                    <th>Materia</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>Juan Pérez</td>
+                    <td>Programación</td>
+                    <td>20/09/2025</td>
+                    <td>Pendiente</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>María Gómez</td>
+                    <td>Base de Datos</td>
+                    <td>18/09/2025</td>
+                    <td>Completada</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Carlos Mendoza</td>
+                    <td>Matemáticas</td>
+                    <td>22/09/2025</td>
+                    <td>En Espera</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2025 Universidad de Guayaquil
+            - Plataforma de Tutorías Académicas
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
